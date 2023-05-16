@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi tabla de datos</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="index.html">Registro</a></li>
+            <li><a href="recargas.html">Recargas</a></li>
+          </ul>
+        </nav>
+      </header>
+    <table>
+      <thead>
+        <tr>
+          <th>Num</th> 
+          <th>Número de control</th>
+          <th>UID</th>
+          <th>Fecha y hora</th>
+          <th>Saldo restado</th>
+          <th>Saldo restante</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Aquí se agregarán las filas de datos dinámicamente con JavaScript -->
+      </tbody>
+    </table>
+
+    <script>
+      // Wait for the page to load
+      window.addEventListener('load', () => {
+        // Get the reference to the table body
+        const tableBody = document.querySelector('#table-body');
+
+        // Create a new row element
+        const newRow = document.createElement('tr');
+
+        // Create new cells and add data to them
+        const cell1 = document.createElement('td');
+        cell1.textContent = '1';
+        newRow.appendChild(cell1);
+
+        const cell2 = document.createElement('td');
+        cell2.textContent = '12345';
+        newRow.appendChild(cell2);
+
+        const cell3 = document.createElement('td');
+        cell3.textContent = 'uid123';
+        newRow.appendChild(cell3);
+
+        const cell4 = document.createElement('td');
+        cell4.textContent = new Date().toLocaleString();
+        newRow.appendChild(cell4);
+
+        const cell5 = document.createElement('td');
+        cell5.textContent = '5';
+        newRow.appendChild(cell5);
+
+        const cell6 = document.createElement('td');
+        cell6.textContent = '25';
+        newRow.appendChild(cell6);
+
+        // Add the new row to the table body
+        tableBody.appendChild(newRow);
+      });
+    </script>
+     <footer>
+        <nav>
+          <ul>
+            <li><a href="https://bdelrio.tecnm.mx/vinculacion/innova.html">TecNM</a></li>
+            <li><a href="https://mulege.tecnm.mx/">ITESME</a></li>
+            <li><a href="https://subes.becasbenitojuarez.gob.mx/">SUBES</a></li>
+          </ul>
+        </nav>
+      </footer>
+  </body>
+</html>
